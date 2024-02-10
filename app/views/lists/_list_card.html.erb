@@ -1,6 +1,6 @@
 <a href="<%= list_path(list) %>">
-  <div class="list-card card col-3 m-2 text-bg-dark" style="width: 250px; height: 200px;">
-    <%= cl_image_tag list.image.key %>
+  <div class="list-card card col-3 m-2 text-bg-dark" style="width: 250px; height: 150px;">
+    <%= cl_image_tag list.image.key, width:250 , height: 150, crop: :fill %>
     <div class="card-img-overlay d-flex align-items-center justify-content-center">
       <h5 class="fw-bold"><%= list.name %></h5>
     </div>

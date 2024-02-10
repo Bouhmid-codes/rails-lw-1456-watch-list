@@ -1,4 +1,4 @@
-<div class="list-banner  position-relative" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= cl_image_path @list.image.key, crop: :fill %>);">
+<div class="list-banner  position-relative" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= cl_image_path @list.image.key, crop: :fill%>);">
   <span class="badge text-light px-3 py-2 m-2 rounded-4 bg-danger position-absolute top-0 end-0"><%= "#{list.movies.count}" %> <i class="fa-solid fa-film"></i></span>
   <div class="container">
     <h1><%= list.name %></h1>
