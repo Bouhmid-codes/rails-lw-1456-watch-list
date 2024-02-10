@@ -1,0 +1,18 @@
+<%= render 'banner'%>
+
+<div class="container d-flex justify-content-center mt-3">
+  <div class="container d-flex justify-content-between w-75">
+    <h2>My lists</h2>
+    <form action='<%= new_list_path %>'>
+      <input type="submit" value="Create a movie list" class="btn btn-success text-light" />
+    </form>
+  </div>
+</div>
+
+<div class="container text-center d-flex justify-content-center">
+  <div class="d-flex flex-wrap w-75 column-gap-3">
+    <% @lists.each do |list| %>
+      <%= render 'list_card', list: list %>
+    <% end %>
+  </div>
+</div>

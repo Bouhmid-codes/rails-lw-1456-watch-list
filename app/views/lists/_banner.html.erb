@@ -1,0 +1,18 @@
+<!-- Generates random images for the banner each time it is rendered -->
+<% img_url_part_1 = 'https://images.unsplash.com/photo-'
+  img_url_part_2 = '&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+  banner_image_paths = [
+  '1478720568477-152d9b164e26?q=80&w=2370',
+  '1536440136628-849c177e76a1?q=80&w=2525',
+  '1489599849927-2ee91cede3ba?q=80&w=2370',
+  '1595769816263-9b910be24d5f?q=80&w=2379',
+  '1574267432553-4b4628081c31?q=80&w=2531',
+  '1640127249305-793865c2efe1?q=80&w=2603' ]
+  banner_image_url = "#{img_url_part_1}#{banner_image_paths.sample}#{img_url_part_2}"
+%>
+
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= banner_image_url %>);">
+  <div class="container">
+    <h1>Save any kind of movie!</h1>
+  </div>
+</div>

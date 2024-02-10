@@ -1,0 +1,23 @@
+<div class="col">
+  <div class="card h-100">
+    <img src="<%= bookmark.movie.poster_url %>" class="card-img-top" style="height: 500px;" alt="<%= bookmark.movie.title %>">
+    <div class="card-body">
+      <div class="d-flex">
+        <h5 class="card-title fw-bold"><%= bookmark.movie.title %> • </h5>
+        <div>
+          <%= " #{bookmark.movie.rating.round(1)}⭐" %>
+        </div>
+      </div>
+      <p class="card-text"><%= bookmark.movie.overview %></p>
+    </div>
+    <div class="card-footer d-flex justify-content-between">
+      <div>
+      <i class="fa-regular fa-comment-dots"></i>
+      <small class="text-body-secondary fst-italic"><%= bookmark.comment %></small>
+      </div>
+      <%= link_to 'delete', bookmark_path(bookmark),
+        data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'},
+        class:'link-danger link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover' %>
+    </div>
+  </div>
+</div>
