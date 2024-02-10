@@ -1,0 +1,9 @@
+<div class="container mt-3 pt-2 justify-content-center">
+    <%= simple_form_for list do |f| %>
+      <%= f.input :name,
+        label_html: { class: 'd-none' },
+        input_html: { class: 'mt-3', placeholder: 'The name of the new list goes here!' } %>
+      <%= f.input :image, as: :file %>
+      <%= f.button :submit, class: 'btn btn-success text-light'%>
+    <% end %>
+</div>
